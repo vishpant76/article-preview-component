@@ -19,7 +19,6 @@ img {
 }
 
 body {
-  /* max-width: 600px; */
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
   margin: 2rem auto;
@@ -48,9 +47,6 @@ h1 {
 
 article {
   display: grid;
-  /* grid-template-rows: 1fr span 2; */
-  /* max-width: 600px; */
-  /* max-width: 80%; */
   grid-template-rows: auto 1fr;
   gap: 2rem;
   border-radius: 0.625rem;
@@ -67,7 +63,6 @@ section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  /* margin: 0 1rem 3rem 3rem; */
   padding: 0 1.5rem 1.5rem;
 }
 
@@ -76,13 +71,6 @@ section {
   flex-direction: column;
   gap: 1.5rem;
 }
-
-/* footer {
-  display: flex;
-  gap: 4rem;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 .footer-default {
   display: flex;
@@ -126,17 +114,15 @@ section {
   color: var(--ddb);
   border: none;
   position: relative;
-  /* z-index: 2; */
 }
 
 footer {
   position: relative;
-  /* margin: 0 -1.5rem -1.5rem; */
 }
 
 .footer-share {
   position: absolute;
-  inset: 0; /* fills footer perfectly */
+  inset: 0;
   margin: 0 -1.5rem -1.5rem;
 
   background: var(--vdgb);
@@ -169,15 +155,6 @@ footer {
   color: var(--gb);
 }
 
-/* .footer-share .share-btn {
-  background: var(--ddb);
-} */
-
-/* .footer-share .share-btn {
-  background: var(--ddb);
-  color: white;
-} */
-
 .share-btn.active {
   background: var(--ddb);
   color: white;
@@ -187,12 +164,6 @@ footer {
   display: none;
 }
 
-/* @media (min-width: 1024px) {
-  article {
-    grid-template-columns: auto 1fr;
-  }
-} */
-/* All horizontal layout rules start here (Tablets & Desktops) */
 @media (min-width: 768px) {
   article {
     grid-template-columns: 285px 1fr;
@@ -203,7 +174,7 @@ footer {
   }
 
   /* FIX: Ensures the image fills the entire left column height */
-  article img {
+  article > img {
     height: 100%;
     width: 100%;
     object-fit: cover;
